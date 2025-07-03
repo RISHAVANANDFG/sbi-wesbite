@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <title>SIP Mutual Funds</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 40px;
+      background-color: #f1f9f0;
+      color: #004d00;
+      line-height: 1.8;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .left-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .left-text h1 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .left-text p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      font-size: 20px;
+      font-weight: bold;
+      color: #006600;
+    }
+
+    a {
+      color: #007700;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 30px;
+      font-weight: bold;
+    }
+
+    .right-image {
+      flex: 1.2;
+      max-width: 500px;
+      margin-left: 15px;
+    }
+
+    .right-image img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .right-image img:hover {
+      transform: scale(1.03);
+    }
+
+    .animated-box {
+      display: inline-block;
+      padding: 12px 24px;
+      margin-top: 30px;
+      font-weight: bold;
+      font-size: 20px;
+      color: white;
+      background-color: #28a745;
+      border-radius: 10px;
+      animation: colorChange 2s infinite alternate, floatBox 2s ease-in-out infinite;
+    }
+
+    @keyframes colorChange {
+      0% { background-color: #28a745; }
+      50% { background-color: #ff9933; }
+      100% { background-color: #007bff; }
+    }
+
+    @keyframes floatBox {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    /* Mobile view adjustments */
+    @media (max-width: 768px) {
+      body {
+        padding: 20px;
+      }
+
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .left-text {
+        text-align: center;
+      }
+
+      .left-text h1 {
+        font-size: 24px;
+      }
+
+      .left-text p {
+        font-size: 16px;
+      }
+
+      .highlight {
+        font-size: 18px;
+      }
+
+      .animated-box {
+        font-size: 18px;
+        padding: 10px 20px;
+      }
+
+      .right-image {
+        margin: 30px 0 0 0;
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Left Text Section -->
+    <div class="left-text">
+      <h1>आज ही शुरू करें</h1>
+      <p>
+        SIP एक ऐसी योजना है जो आपकी बड़ी आर्थिक ज़रूरतों को पूरा कर सकती है।<br>
+        आप हर महीने थोड़ी-थोड़ी राशि निवेश करके भविष्य में लाखों रुपये बचा सकते हैं।<br>
+        उदाहरण के तौर पर, ₹3000 की मासिक SIP से आप ₹15 लाख तक भी पहुँच सकते हैं।<br>
+        कोई भी व्यक्ति अपनी सुविधा अनुसार ₹1000, ₹2000 या अधिक राशि चुनकर SIP शुरू कर सकता है।
+      </p>
+      <p class="highlight">
+        चलिए, एक कदम और — आर्थिक क्रांति की ओर।
+      </p>
+
+      <!-- Moving Color-Changing Box -->
+      <div class="animated-box">आज ही शुरू करें</div>
+
+      <a href="index.html">← वापस जाएं</a>
+    </div>
+
+    <!-- Right Image Section -->
+    <div class="right-image">
+      <img src="sip-image.jpg" alt="SIP Illustration">
+    </div>
+  </div>
+
+</body>
+</html>
