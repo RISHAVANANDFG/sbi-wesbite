@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <title>Jeevan Beema</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e8f0fc;
+      color: #002f5f;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .left-image {
+      flex: 1;
+      max-width: 400px;
+      margin-right: 40px;
+      animation: pulseImage 4s ease-in-out infinite;
+    }
+
+    .left-image img {
+      width: 100%;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .left-image img:hover {
+      transform: scale(1.04);
+    }
+
+    @keyframes pulseImage {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+
+    .content {
+      flex: 2;
+      min-width: 300px;
+    }
+
+    .content h1 {
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+
+    .emoji-box {
+      font-size: 18px;
+      background: #fff;
+      padding: 12px 16px;
+      border-radius: 10px;
+      display: inline-block;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      text-align: center;
+      width: 100%;
+      max-width: 350px;
+    }
+
+    .emoji-box img {
+      max-width: 60px;
+      margin-top: 10px;
+      border-radius: 6px;
+      opacity: 0.8;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .back-box {
+      position: relative;
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #0072bc;
+      color: white;
+      font-weight: bold;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 20px;
+      text-decoration: none;
+    }
+
+    .back-box span {
+      position: relative;
+      z-index: 2;
+    }
+
+    .moving-arrow {
+      position: absolute;
+      font-size: 18px;
+      color: black;
+      animation: moveCursor 4s linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes moveCursor {
+      0%   { top: 0; left: 0; transform: translateY(-100%) rotate(0deg); }
+      25%  { top: 0; left: 100%; transform: translateX(-100%) rotate(90deg); }
+      50%  { top: 100%; left: 100%; transform: translate(-100%, 0%) rotate(180deg); }
+      75%  { top: 100%; left: 0%; transform: translate(0%, 0%) rotate(270deg); }
+      100% { top: 0; left: 0; transform: translateY(-100%) rotate(360deg); }
+    }
+
+    /* Mobile Optimization */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 20px;
+        align-items: center;
+      }
+
+      .left-image {
+        margin-right: 0;
+        margin-bottom: 30px;
+        max-width: 90%;
+      }
+
+      .emoji-box {
+        max-width: 100%;
+        font-size: 16px;
+      }
+
+      .content {
+        text-align: center;
+      }
+
+      .content p {
+        font-size: 16px;
+        text-align: justify;
+      }
+
+      .moving-arrow {
+        display: none;
+      }
+
+      .back-box {
+        font-size: 16px;
+        padding: 12px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Left Image (Life Insurance) -->
+    <div class="left-image">
+      <img src="life-insurance.jfif" alt="Life Insurance Image">
+    </div>
+
+    <!-- Right Content -->
+    <div class="content">
+      <h1>जीवन बीमा की ज़रूरत</h1>
+
+      <!-- Question-like Image Box -->
+      <div class="emoji-box">
+        क्या वाकई जीवन बीमा की ज़रूरत नहीं है?
+        <br>
+        <img src="thinking-person.jpg" alt="Thinking person image">
+      </div>
+
+      <!-- Main Content Paragraph -->
+      <p>
+        अगर आपको लगता है कि आपको जीवन बीमा की ज़रूरत नहीं है, तो क्या आप सही हैं?<br>
+        क्या आपने सोचा है कि अगर आप नहीं रहेंगे तो आपके घर के खर्चे कौन चलाएगा?<br>
+        बच्चों की पढ़ाई और शादी के खर्चे कौन उठाएगा?<br>
+        आपकी ज़िम्मेदारी कौन निभाएगा?
+      </p>
+      <p>
+        बीमा इन सभी ज़रूरतों को पूरा करता है और यह आपके लिए नहीं, बल्कि आपके परिवार के लिए है।
+      </p>
+
+      <!-- वापस जाएं Button with Cursor -->
+      <a href="index.html" class="back-box">
+        <span>← वापस जाएं</span>
+        <div class="moving-arrow">➤</div>
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
