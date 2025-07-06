@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+'<!DOCTYPE html>
 <html lang="hi">
 <head>
   <meta charset="UTF-8">
@@ -54,101 +54,89 @@
       margin-bottom: 15px;
     }
 
-    .emoji-box {
-      font-size: 18px;
-      background: #fff;
-      padding: 12px 16px;
-      border-radius: 10px;
-      display: inline-block;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
+    .tagline {
+      font-size: 20px;
+      color: #e60000;
+      margin-bottom: 25px;
+      font-weight: bold;
       text-align: center;
-      width: 100%;
-      max-width: 350px;
-    }
-
-    .emoji-box img {
-      max-width: 60px;
-      margin-top: 10px;
-      border-radius: 6px;
-      opacity: 0.8;
     }
 
     .content p {
       font-size: 18px;
       line-height: 1.8;
       margin-bottom: 20px;
+      text-align: justify;
     }
 
-    .back-box {
-      position: relative;
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: #0072bc;
+    .contact-line {
+      margin-top: 25px;
+      text-align: center;
+      font-size: 18px;
+      color: #003366;
+      font-weight: 500;
+    }
+
+    .button-group {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .redirect-button {
+      padding: 14px 28px;
       color: white;
       font-weight: bold;
+      border: none;
       border-radius: 10px;
-      overflow: hidden;
-      margin-top: 20px;
+      cursor: pointer;
+      font-size: 16px;
       text-decoration: none;
+      display: inline-block;
+      animation: sharedColorCycle 6s infinite alternate;
+      transition: transform 0.2s ease;
     }
 
-    .back-box span {
-      position: relative;
-      z-index: 2;
+    .redirect-button:hover {
+      transform: scale(1.1);
     }
 
-    .moving-arrow {
-      position: absolute;
-      font-size: 18px;
-      color: black;
-      animation: moveCursor 4s linear infinite;
-      z-index: 1;
+    @keyframes sharedColorCycle {
+      0%   { background-color: #e60000; }  /* red */
+      25%  { background-color: #ff9900; }  /* orange */
+      50%  { background-color: #28a745; }  /* green */
+      75%  { background-color: #0072bc; }  /* blue */
+      100% { background-color: #6f42c1; }  /* purple */
     }
 
-    @keyframes moveCursor {
-      0%   { top: 0; left: 0; transform: translateY(-100%) rotate(0deg); }
-      25%  { top: 0; left: 100%; transform: translateX(-100%) rotate(90deg); }
-      50%  { top: 100%; left: 100%; transform: translate(-100%, 0%) rotate(180deg); }
-      75%  { top: 100%; left: 0%; transform: translate(0%, 0%) rotate(270deg); }
-      100% { top: 0; left: 0; transform: translateY(-100%) rotate(360deg); }
-    }
-
-    /* Mobile Optimization */
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
         padding: 20px;
         align-items: center;
       }
-
       .left-image {
         margin-right: 0;
         margin-bottom: 30px;
         max-width: 90%;
       }
-
-      .emoji-box {
-        max-width: 100%;
-        font-size: 16px;
-      }
-
       .content {
         text-align: center;
       }
-
       .content p {
         font-size: 16px;
-        text-align: justify;
       }
-
-      .moving-arrow {
-        display: none;
+      .tagline {
+        font-size: 18px;
       }
-
-      .back-box {
-        font-size: 16px;
+      .redirect-button {
+        font-size: 14px;
         padding: 12px 20px;
+      }
+      .contact-line {
+        font-size: 16px;
       }
     }
   </style>
@@ -156,7 +144,7 @@
 <body>
 
   <div class="container">
-    <!-- Left Image (Life Insurance) -->
+    <!-- Left Image -->
     <div class="left-image">
       <img src="life-insurance.jfif" alt="Life Insurance Image">
     </div>
@@ -165,29 +153,37 @@
     <div class="content">
       <h1>जीवन बीमा की ज़रूरत</h1>
 
-      <!-- Question-like Image Box -->
-      <div class="emoji-box">
-        क्या वाकई जीवन बीमा की ज़रूरत नहीं है?
-        <br>
-        <img src="thinking-person.jpg" alt="Thinking person image">
+      <!-- Tagline -->
+      <div class="tagline">
+        "अपनों का भविष्य, आपकी समझदारी!"
       </div>
 
       <!-- Main Content Paragraph -->
       <p>
-        अगर आपको लगता है कि आपको जीवन बीमा की ज़रूरत नहीं है, तो क्या आप सही हैं?<br>
-        क्या आपने सोचा है कि अगर आप नहीं रहेंगे तो आपके घर के खर्चे कौन चलाएगा?<br>
-        बच्चों की पढ़ाई और शादी के खर्चे कौन उठाएगा?<br>
-        आपकी ज़िम्मेदारी कौन निभाएगा?
+        अगर आपको लगता है कि आपको बीमा की जरूरत नहीं है तो हो सकता है आप सही हों।
       </p>
       <p>
-        बीमा इन सभी ज़रूरतों को पूरा करता है और यह आपके लिए नहीं, बल्कि आपके परिवार के लिए है।
+        लेकिन जरा सोचिए :-<br>
+        i) आपके नहीं रहने पर आपके घर के सपनों को कौन पूरा करेगा?<br>
+        ii) आपके बच्चे की पढ़ाई का सपना कौन पूरा करेगा?<br>
+        iii) आपकी बच्ची की शादी की जिम्मेदारी कौन निभाएगा?<br>
+        iv) अस्पताल में भर्ती होने पर अस्पताल का बिल कौन भरेगा?<br>
+        v) आपने अपने रिलेशन में कोई इन्सुरेंस नहीं लिया, आपके जाने के बाद आपके रिलेशन के सपनों को कौन पूरा करेगा?<br>
+        vi) बीमा के द्वारा आप बीमार होकर भी सही रहते हुए जरूरतों को पूरा कर सकते हैं।<br>
+        vii) बीमा आपके लिए नहीं, आपके परिवार के लिए है। क्या आपने परिवार-बच्चों से कहकर रखा है कि बीमार या जाने के बाद कैसे कर इंतेजार?
       </p>
 
-      <!-- वापस जाएं Button with Cursor -->
-      <a href="index.html" class="back-box">
-        <span>← वापस जाएं</span>
-        <div class="moving-arrow">➤</div>
-      </a>
+      <!-- Contact line -->
+      <div class="contact-line">
+        आप हमें इन सब सेवाओं के लिए भी संपर्क कर सकते हैं 😊
+      </div>
+
+      <!-- Buttons Group -->
+      <div class="button-group">
+        <a href="index.html" class="redirect-button">जीवन बीमा</a>
+        <a href="index.html" class="redirect-button">स्वास्थ्य बीमा</a>
+        <a href="index.html" class="redirect-button">गाड़ी बीमा</a>
+      </div>
     </div>
   </div>
 
