@@ -34,15 +34,79 @@
     .left-text p {
       font-size: 18px;
       margin-bottom: 20px;
+      text-align: justify;
     }
 
     .highlight {
       font-size: 20px;
       font-weight: bold;
       color: #006600;
+      margin-bottom: 25px;
     }
 
-    a {
+    .contact-line {
+      margin-top: 25px;
+      text-align: center;
+      font-size: 18px;
+      color: #003366;
+      font-weight: 500;
+    }
+
+    .button-group {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .redirect-button {
+      padding: 14px 28px;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      text-decoration: none;
+      display: inline-block;
+      animation-duration: 6s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      transition: transform 0.2s ease;
+    }
+
+    .redirect-button:hover {
+      transform: scale(1.1);
+    }
+
+    .btn-jeevan {
+      animation-name: colorCycleJeevan;
+    }
+    .btn-swastya {
+      animation-name: colorCycleSwastya;
+    }
+    .btn-gaadi {
+      animation-name: colorCycleGaadi;
+    }
+
+    @keyframes colorCycleJeevan {
+      0% { background-color: #e60000; }
+      50% { background-color: #ff9900; }
+      100% { background-color: #28a745; }
+    }
+    @keyframes colorCycleSwastya {
+      0% { background-color: #0072bc; }
+      50% { background-color: #6f42c1; }
+      100% { background-color: #ff00ff; }
+    }
+    @keyframes colorCycleGaadi {
+      0% { background-color: #800000; }
+      50% { background-color: #008080; }
+      100% { background-color: #ffa500; }
+    }
+
+    a.back-link {
       color: #007700;
       text-decoration: none;
       display: inline-block;
@@ -67,30 +131,6 @@
       transform: scale(1.03);
     }
 
-    .animated-box {
-      display: inline-block;
-      padding: 12px 24px;
-      margin-top: 30px;
-      font-weight: bold;
-      font-size: 20px;
-      color: white;
-      background-color: #28a745;
-      border-radius: 10px;
-      animation: colorChange 2s infinite alternate, floatBox 2s ease-in-out infinite;
-    }
-
-    @keyframes colorChange {
-      0% { background-color: #28a745; }
-      50% { background-color: #ff9933; }
-      100% { background-color: #007bff; }
-    }
-
-    @keyframes floatBox {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
-    }
-
-    /* Mobile view adjustments */
     @media (max-width: 768px) {
       body {
         padding: 20px;
@@ -117,9 +157,13 @@
         font-size: 18px;
       }
 
-      .animated-box {
-        font-size: 18px;
-        padding: 10px 20px;
+      .redirect-button {
+        font-size: 16px;
+        padding: 12px 20px;
+      }
+
+      .contact-line {
+        font-size: 16px;
       }
 
       .right-image {
@@ -134,21 +178,31 @@
   <div class="container">
     <!-- Left Text Section -->
     <div class="left-text">
-      <h1>आज ही शुरू करें</h1>
+      <h1>SIP (म्यूचुअल फंड)</h1>
+
       <p>
-        SIP एक ऐसी योजना है जो आपकी बड़ी आर्थिक ज़रूरतों को पूरा कर सकती है।<br>
-        आप हर महीने थोड़ी-थोड़ी राशि निवेश करके भविष्य में लाखों रुपये बचा सकते हैं।<br>
-        उदाहरण के तौर पर, ₹3000 की मासिक SIP से आप ₹15 लाख तक भी पहुँच सकते हैं।<br>
-        कोई भी व्यक्ति अपनी सुविधा अनुसार ₹1000, ₹2000 या अधिक राशि चुनकर SIP शुरू कर सकता है।
+        SIP एक ऐसी योजना है जो आपकी कई आर्थिक जरूरतों को पूरी करने में आपकी मदद कर सकती है।<br>
+        SIP एक ऐसी योजना है जिसमें महीने के कम से कम 500 रुपये से निवेश कर लंबी अवधि के सपनों को फंड बनाया जा सकता है।<br>
+        आप पॉलिसी धारक सुरक्षित और आश्वस्तचित रहेंगे जानेंगे कि 3000 रुपये की मासिक SIP में 30 वर्षों में कम से कम 1 करोड़ रुपये तक का फंड प्लान बनाया जा सकता है।<br>
+        यह आपके सभी सपनों को साकार करने के लिए काफी है। आपके बीमार होने की स्थिति तक के खर्च को उठाएगा।
       </p>
+
       <p class="highlight">
-        चलिए, एक कदम और — आर्थिक क्रांति की ओर।
+        पहला कदम आर्थिक स्वतंत्रता की ओर
       </p>
 
-      <!-- Moving Color-Changing Box -->
-      <div class="animated-box">आज ही शुरू करें</div>
+      <div class="contact-line">
+        आप हमें इन सब सेवाओं के लिए भी संपर्क कर सकते हैं 😊
+      </div>
 
-      <a href="index.html">← वापस जाएं</a>
+      <!-- Buttons Group -->
+      <div class="button-group">
+        <a href="index.html" class="redirect-button btn-jeevan">जीवन बीमा</a>
+        <a href="index.html" class="redirect-button btn-swastya">स्वास्थ्य बीमा</a>
+        <a href="index.html" class="redirect-button btn-gaadi">गाड़ी बीमा</a>
+      </div>
+
+      <a href="index.html" class="back-link">← वापस जाएं</a>
     </div>
 
     <!-- Right Image Section -->
